@@ -59,7 +59,9 @@ const Todo = () => {
    </div>
   {/*-------Todo list-------- */}
   <div>
-    
+    {todoList.map((item,index)=>{
+      return <TodoItems key={index} text={item.text} id={item.id} isComplete={item.isComplete} deleteTodo={deleteTodo} toggle={toggle}/>
+    }
     )}
    
     
